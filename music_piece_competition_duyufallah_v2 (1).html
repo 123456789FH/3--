@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مسابقة المقطوعة الموسيقية — مشاهدة الحلول حسب المستوى</title>
+  <meta name="theme-color" content="#6d28d9"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family:'Tajawal',ui-sans-serif,system-ui; background:linear-gradient(180deg,#eef2ff,#e0f2fe); }
+    .card { background:#fff; border-radius:16px; box-shadow:0 10px 24px rgba(2,6,23,.12); }
+    .panel { max-height:0; overflow:hidden; transition:max-height .35s ease; background:#fff; border-bottom-left-radius:16px; border-bottom-right-radius:16px; }
+    .chev { transition: transform .25s ease; }
+    .rotate-180 { transform: rotate(180deg); }
+    .badge { width:40px;height:40px;border-radius:9999px;background:linear-gradient(135deg,#a78bfa,#06b6d4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700; }
+    .frame { position:relative; padding-top:56.25%; background:#0f172a; border-radius:12px; overflow:hidden; }
+    .frame iframe { position:absolute; left:0; top:0; width:100%; height:100%; border:0; }
+  </style>
+</head>
+<body>
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <header class="text-center mb-10">
+      <div class="inline-flex items-center gap-3 mb-3">
+        <span class="inline-block p-2 rounded-full bg-indigo-100 ring-1 ring-indigo-200" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3" fill="#a78bfa" stroke="none"/>
+            <circle cx="18" cy="16" r="3" fill="#06b6d4" stroke="none"/>
+          </svg>
+        </span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-indigo-900 m-0">مسابقة المقطوعة الموسيقية</h1>
+      </div>
+      <p class="text-indigo-700">اختر المستوى لمشاهدة الحل</p>
+    </header>
+    <section class="space-y-5">
+      <div class="card">
+        <button class="w-full flex items-center gap-4 p-6" aria-controls="lvl-1" aria-expanded="false" onclick="togglePanel('lvl-1', this)">
+          <span class="badge">1</span>
+          <div class="flex-1 text-right">
+            <div class="text-2xl font-bold text-indigo-900">المستوى الأول</div>
+            <div class="text-indigo-700 mt-1">الانطلاقة</div>
+          </div>
+          <svg class="chev w-6 h-6 text-indigo-700" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div id="lvl-1" class="panel px-6 pb-6">
+          <div class="frame"><iframe src="https://drive.google.com/file/d/1J336ZExRsjMpP7ts7AI_w591pvoqrW-a/preview?usp=sharing" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <div class="mt-3 text-sm text-indigo-800"><a class="underline hover:no-underline" href="https://drive.google.com/file/d/1J336ZExRsjMpP7ts7AI_w591pvoqrW-a/view?usp=sharing" target="_blank" rel="noopener">فتح الفيديو في تبويب جديد</a></div>
+        </div>
+      </div>
+      <div class="card">
+        <button class="w-full flex items-center gap-4 p-6" aria-controls="lvl-2" aria-expanded="false" onclick="togglePanel('lvl-2', this)">
+          <span class="badge">2</span>
+          <div class="flex-1 text-right">
+            <div class="text-2xl font-bold text-indigo-900">المستوى الثاني</div>
+            <div class="text-indigo-700 mt-1">تحديات ممتعة</div>
+          </div>
+          <svg class="chev w-6 h-6 text-indigo-700" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div id="lvl-2" class="panel px-6 pb-6">
+          <div class="frame"><iframe src="https://drive.google.com/file/d/1W64AUL1pHi2Ij-wL1e3CyUrUaTUwhxUz/preview?usp=drive_link" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <div class="mt-3 text-sm text-indigo-800"><a class="underline hover:no-underline" href="https://drive.google.com/file/d/1W64AUL1pHi2Ij-wL1e3CyUrUaTUwhxUz/view?usp=drive_link" target="_blank" rel="noopener">فتح الفيديو في تبويب جديد</a></div>
+        </div>
+      </div>
+      <div class="card">
+        <button class="w-full flex items-center gap-4 p-6" aria-controls="lvl-3" aria-expanded="false" onclick="togglePanel('lvl-3', this)">
+          <span class="badge">3</span>
+          <div class="flex-1 text-right">
+            <div class="text-2xl font-bold text-indigo-900">المستوى الثالث</div>
+            <div class="text-indigo-700 mt-1">المغامرة تتسع</div>
+          </div>
+          <svg class="chev w-6 h-6 text-indigo-700" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div id="lvl-3" class="panel px-6 pb-6">
+          <div class="frame"><iframe src="https://drive.google.com/file/d/1-Y_8dKnE-_ewG2n4IRAOiDPM6b2qi9IF/preview?usp=drive_link" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <div class="mt-3 text-sm text-indigo-800"><a class="underline hover:no-underline" href="https://drive.google.com/file/d/1-Y_8dKnE-_ewG2n4IRAOiDPM6b2qi9IF/view?usp=drive_link" target="_blank" rel="noopener">فتح الفيديو في تبويب جديد</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center mt-12 text-indigo-800">
+      <p class="text-lg">استمتع باللعب وواصل لأعلى المستويات! 🎵</p>
+      <p class="mt-2 text-sm font-semibold">شرح المشرف التربوي :ضيف الله طوهري</p>
+    </footer>
+  </main>
+
+  <script>
+    function togglePanel(id, btn){
+      const panel = document.getElementById(id);
+      const isOpen = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+      document.querySelectorAll('.panel').forEach(p=> p.style.maxHeight=null);
+      document.querySelectorAll('button[aria-expanded="true"]').forEach(b=> b.setAttribute('aria-expanded','false'));
+      document.querySelectorAll('.chev').forEach(c=> c.classList.remove('rotate-180'));
+      if(!isOpen){
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        if (btn) { btn.setAttribute('aria-expanded','true'); const ic = btn.querySelector('.chev'); if (ic) ic.classList.add('rotate-180'); }
+      }
+    }
+  </script>
+</body>
+</html>
